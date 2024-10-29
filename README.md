@@ -1,10 +1,10 @@
 <h1 align="center">iMatching: Imperative Correspondence Learning</h1>
 
 <p align="center"><strong>
-    <a href = "https://www.linkedin.com/in/zitong-zhan-134a85141/">Zitong Zhan</a><sup>1</sup>,
-    <a href = "https://scholar.google.com/citations?user=_loctXsAAAAJ">Dasong Gao</a><sup>2</sup>,
+    <a href = "https://www.linkedin.com/in/zitong-zhan-134a85141/">Zitong Zhan</a><sup>*</sup>,
+    <a href = "https://scholar.google.com/citations?user=_loctXsAAAAJ">Dasong Gao</a><sup>*</sup>,
     Yun-Jou Lin, Youjie Xia,
-    <a href = "https://sairlab.org/team/chenw/">Chen Wang</a><sup>2</sup>,
+    <a href = "https://sairlab.org/team/chenw/">Chen Wang</a>,
 </strong></p>
 
 
