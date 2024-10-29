@@ -7,9 +7,8 @@
         {
             "env": {
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
-                // "OMP_NUM_THREADS": "16",
-                // "MKL_NUM_THREADS": "16",
-                // "CUDA_VISIBLE_DEVICES":"1"
+                "OMP_NUM_THREADS": "16",
+                "MKL_NUM_THREADS": "16",
             },
             "name": "caps train tartan",
             "type": "python",
@@ -27,9 +26,8 @@
         {
             "env": {
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
-                // "OMP_NUM_THREADS": "16",
-                // "MKL_NUM_THREADS": "16",
-                // "CUDA_VISIBLE_DEVICES":"5"
+                "OMP_NUM_THREADS": "16",
+                "MKL_NUM_THREADS": "16",
             },
             "name": "p2p train tartan",
             "type": "python",
@@ -42,7 +40,6 @@
                 "log_dir=/tmp/debug_p2p_tta",
                 "datamodule.include=\"abandonedfactory_Easy\"", 
                 "task_cat=debug",
-                // "ckpt_path=\"tta_logs/p2p_log_dir_abandonedfactory_Easy/lightning_logs/version_1/checkpoints/epoch=15-reproj_mma_1.0px=0.176.ckpt\"",
                 "trainer.accelerator=cpu",
                 "trainer.devices=1",
             ]
@@ -50,9 +47,8 @@
         {
             "env": {
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
-                // "OMP_NUM_THREADS": "16",
-                // "MKL_NUM_THREADS": "16",
-                // "CUDA_VISIBLE_DEVICES":"5"
+                "OMP_NUM_THREADS": "16",
+                "MKL_NUM_THREADS": "16",
             },
             "name": "dkm train tartan",
             "type": "python",
@@ -73,9 +69,8 @@
         {
             "env": {
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
-                // "OMP_NUM_THREADS": "16",
-                // "MKL_NUM_THREADS": "16",
-                // "CUDA_VISIBLE_DEVICES":"5"
+                "OMP_NUM_THREADS": "16",
+                "MKL_NUM_THREADS": "16",
             },
             "name": "dkm test tartan",
             "type": "python",
@@ -89,7 +84,6 @@
                 "trainer.max_epochs=1",
                 "datamodule.include=\"abandonedfactory_Easy\"", 
                 "task_cat=test",
-                // "ckpt_path=\"/data/zitongz3/tta_logs/dkm_log_dir_abandonedfactory_Easy/lightning_logs/version_2/checkpoints/epoch=0-reproj_mma_1.0px=0.663.ckpt\"",
                 "trainer.accelerator=cpu",
                 "trainer.devices=1",
             ]
@@ -97,9 +91,6 @@
         {
             "env": {
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
-                // "OMP_NUM_THREADS": "16",
-                // "MKL_NUM_THREADS": "16",
-                // "CUDA_VISIBLE_DEVICES":"6"
             },
             "name": "dkm train eth3d",
             "type": "python",
@@ -109,12 +100,9 @@
             "justMyCode": false,
             "args": ["--config-name", "dkm-train-eth3dslam", 
                 "data_root=/data/",
-                // "task_cat=debug",
                 "log_dir=/tmp/debug_wo",
-                // "trainer.accelerator=cpu",
                 "trainer.devices=1",
                 "datamodule.test_config.wrapper.cfg.item_spacing=1",
-                // "ckpt_path=\"/tmp/debug_wo/lightning_logs/version_29/checkpoints/epoch=7-step=32.ckpt\"",
                 // "+trainer.strategy=\"ddp_find_unused_parameters_true\"",
                 "datamodule.split_ratio=['cables_2+cables_3+cables_4+cables_5','cables_1','cables_1']",
             ]
@@ -124,7 +112,6 @@
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
                 "OMP_NUM_THREADS": "16",
                 "MKL_NUM_THREADS": "16",
-                // "CUDA_VISIBLE_DEVICES":"7"
             },
             "name": "aspan train tartan",
             "type": "python",
@@ -144,9 +131,8 @@
         {
             "env": {
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
-                // "OMP_NUM_THREADS": "16",
-                // "MKL_NUM_THREADS": "16",
-                // "CUDA_VISIBLE_DEVICES":"6"
+                "OMP_NUM_THREADS": "16",
+                "MKL_NUM_THREADS": "16",
             },
             "name": "caps train eth3d",
             "type": "python",
@@ -166,9 +152,8 @@
         {
             "env": {
                 "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
-                // "OMP_NUM_THREADS": "16",
-                // "MKL_NUM_THREADS": "16",
-                "CUDA_VISIBLE_DEVICES":"5"
+                "OMP_NUM_THREADS": "16",
+                "MKL_NUM_THREADS": "16",
             },
             "name": "test generic",
             "type": "python",
