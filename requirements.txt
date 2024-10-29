@@ -1,0 +1,27 @@
+h5py
+hydra-core
+kornia
+opencv-python
+pytorch-lightning
+pyvista
+panel
+scipy
+scikit-image
+torchmetrics
+typing_inspect
+tensorboard
+py7zr
+portalocker>=2.0.0
+torchdata==0.7.0
+visdom
+einops
+yacs
+loguru
+joblib
+dsd
+trame
+trame-vuetify
+trame-vtk
+ipywidgets
+# conda install -c conda-forge xorg-libxext xorg-libx11
+# 

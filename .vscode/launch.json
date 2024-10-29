@@ -1,0 +1,189 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                // "OMP_NUM_THREADS": "16",
+                // "MKL_NUM_THREADS": "16",
+                // "CUDA_VISIBLE_DEVICES":"1"
+            },
+            "name": "caps train tartan",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--config-name", "train-tartanair", 
+                "data_root=./data/datasets",
+                "log_dir=/tmp/debug_wo",
+                "trainer.accelerator=cpu",
+                "trainer.devices=1",
+            ]
+        },
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                // "OMP_NUM_THREADS": "16",
+                // "MKL_NUM_THREADS": "16",
+                // "CUDA_VISIBLE_DEVICES":"5"
+            },
+            "name": "p2p train tartan",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--config-name", "p2p-train-tartanair", 
+                "data_root=./data/datasets",
+                "log_dir=/tmp/debug_p2p_tta",
+                "datamodule.include=\"abandonedfactory_Easy\"", 
+                "task_cat=debug",
+                // "ckpt_path=\"tta_logs/p2p_log_dir_abandonedfactory_Easy/lightning_logs/version_1/checkpoints/epoch=15-reproj_mma_1.0px=0.176.ckpt\"",
+                "trainer.accelerator=cpu",
+                "trainer.devices=1",
+            ]
+        },
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                // "OMP_NUM_THREADS": "16",
+                // "MKL_NUM_THREADS": "16",
+                // "CUDA_VISIBLE_DEVICES":"5"
+            },
+            "name": "dkm train tartan",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--config-name", "dkm-train-tartanair", 
+                "data_root=./data/datasets",
+                "log_dir=/tmp/debug_dkm_tta",
+                "trainer.max_epochs=1",
+                "datamodule.include=\"abandonedfactory_Easy\"", 
+                "task_cat=debug",
+                "trainer.accelerator=cpu",
+                "trainer.devices=1",
+            ]
+        },
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                // "OMP_NUM_THREADS": "16",
+                // "MKL_NUM_THREADS": "16",
+                // "CUDA_VISIBLE_DEVICES":"5"
+            },
+            "name": "dkm test tartan",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--config-name", "dkm-train-tartanair", 
+                "data_root=./data/datasets",
+                "log_dir=/tmp/debug_dkm_tta",
+                "trainer.max_epochs=1",
+                "datamodule.include=\"abandonedfactory_Easy\"", 
+                "task_cat=test",
+                // "ckpt_path=\"/data/zitongz3/tta_logs/dkm_log_dir_abandonedfactory_Easy/lightning_logs/version_2/checkpoints/epoch=0-reproj_mma_1.0px=0.663.ckpt\"",
+                "trainer.accelerator=cpu",
+                "trainer.devices=1",
+            ]
+        },
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                // "OMP_NUM_THREADS": "16",
+                // "MKL_NUM_THREADS": "16",
+                // "CUDA_VISIBLE_DEVICES":"6"
+            },
+            "name": "dkm train eth3d",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--config-name", "dkm-train-eth3dslam", 
+                "data_root=/data/",
+                // "task_cat=debug",
+                "log_dir=/tmp/debug_wo",
+                // "trainer.accelerator=cpu",
+                "trainer.devices=1",
+                "datamodule.test_config.wrapper.cfg.item_spacing=1",
+                // "ckpt_path=\"/tmp/debug_wo/lightning_logs/version_29/checkpoints/epoch=7-step=32.ckpt\"",
+                // "+trainer.strategy=\"ddp_find_unused_parameters_true\"",
+                "datamodule.split_ratio=['cables_2+cables_3+cables_4+cables_5','cables_1','cables_1']",
+            ]
+        },
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                "OMP_NUM_THREADS": "16",
+                "MKL_NUM_THREADS": "16",
+                // "CUDA_VISIBLE_DEVICES":"7"
+            },
+            "name": "aspan train tartan",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--config-name", "aspan-train-tartanair", 
+                "data_root=./data/datasets",
+                "task_cat=debug",
+                "log_dir=/tmp/debug_aspan_tta",
+                "datamodule.include=\"abandonedfactory_Easy\"", 
+                "trainer.accelerator=cpu",
+                "trainer.devices=1",
+            ]
+        },
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                // "OMP_NUM_THREADS": "16",
+                // "MKL_NUM_THREADS": "16",
+                // "CUDA_VISIBLE_DEVICES":"6"
+            },
+            "name": "caps train eth3d",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": ["--config-name", "train-eth3d-slam", 
+                "data_root=/data/common",
+                "task_cat=debug",
+                "log_dir=/tmp/debug_wo",
+                "trainer.accelerator=cpu",
+                "trainer.devices=1",
+                "datamodule.split_ratio=['cables_2+cables_3+cables_4+cables_5','cables_1','cables_1']",
+            ]
+        },
+        {
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}",
+                // "OMP_NUM_THREADS": "16",
+                // "MKL_NUM_THREADS": "16",
+                "CUDA_VISIBLE_DEVICES":"5"
+            },
+            "name": "test generic",
+            "type": "python",
+            "request": "launch",
+            "program": "${cwd}/train.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--config-name", "crw-train-tartanair", 
+                "data_root=./data/datasets",
+                "task_cat=test",
+                "datamodule.include=\"abandonedfactory_Easy\"", 
+                "trainer.accelerator=cpu",
+                "trainer.devices=1",
+            ]
+        },
+    ]
+}

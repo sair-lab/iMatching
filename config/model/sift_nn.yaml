@@ -1,0 +1,4 @@
+defaults:
+  - model
+  - keypoint: sift
+  - matching: nn

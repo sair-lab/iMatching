@@ -1,0 +1,8 @@
+defaults:
+  - model
+  - keypoint: null
+  - matching: dkm
+  - cfg/criterion: caps_ctof
+
+matching:
+  model_zoo: indoor

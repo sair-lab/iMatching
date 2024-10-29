@@ -1,0 +1,8 @@
+defaults:
+  - base
+  - dataset@train_config.dataset: eth3d_slam
+  - wrapper@train_config.wrapper: spaced-sequence
+  - dataset@validate_config.dataset: eth3d_slam
+  - wrapper@validate_config.wrapper: spaced-sequence
+  - dataset@test_config.dataset: eth3d_slam
+  - wrapper@test_config.wrapper: spaced-sequence

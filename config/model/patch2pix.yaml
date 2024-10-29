@@ -1,0 +1,8 @@
+defaults:
+  - model
+  - keypoint: null
+  - matching: patch2pix
+  - cfg/criterion: caps_ctof
+
+matching:
+  model_path: pretrained/patch2pix_pretrained.pth

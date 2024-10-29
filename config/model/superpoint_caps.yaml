@@ -1,0 +1,8 @@
+defaults:
+  - model
+  - keypoint: superpoint
+  - matching: caps
+  - cfg/criterion: caps_ctof
+
+matching:
+  model_path: pretrained/caps-pretrained.pth

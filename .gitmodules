@@ -1,0 +1,25 @@
+[submodule "ext/caps"]
+	path = ext/caps
+	url = https://github.com/Xanthorapedia/caps.git
+[submodule "ext/r2d2"]
+	path = ext/r2d2
+	url = https://github.com/Xanthorapedia/r2d2.git
+[submodule "ext/SuperGluePretrainedNetwork"]
+	path = ext/SuperGluePretrainedNetwork
+	url = https://github.com/magicleap/SuperGluePretrainedNetwork.git
+[submodule "thirdparty/gtsam"]
+	path = thirdparty/gtsam
+	url = https://github.com/borglab/gtsam.git
+	branch = release/4.1.1
+[submodule "ext/patch2pix"]
+	path = ext/patch2pix
+	url = https://github.com/GrumpyZhou/patch2pix
+[submodule "ext/aspanformer"]
+	path = ext/aspanformer
+	url = https://github.com/zitongzhan/ml-aspanformer.git
+[submodule "ext/DKM"]
+	path = ext/DKM
+	url = https://github.com/Parskatt/DKM.git
+[submodule "ext/RoMa"]
+	path = ext/RoMa
+	url = git@github.com:Parskatt/RoMa.git

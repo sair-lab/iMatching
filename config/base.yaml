@@ -1,0 +1,24 @@
+# @package _global_
+
+defaults:
+  - /schema/main@_here_
+  - trainer: gpu
+  - logger: tensorboard
+  - model: superpoint_caps
+  - hydra: default
+  - _self_
+
+# overrides
+log_dir: ./logs
+data_root: /data/datasets
+task: ???
+task_cat: ???
+ckpt_path: null
+
+trainer:
+  devices: [0]
+
+model:
+  cfg:
+    # scale: ${datamodule.per_stage_config.default.scale}
+    task: ${task}

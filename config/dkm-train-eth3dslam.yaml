@@ -1,0 +1,57 @@
+# @package _global_
+
+defaults:
+  - dkm-train
+  - datamodule: eth3d_slam
+  - _self_
+
+# overrides
+task: dkm-train-eth3d_slam
+
+trainer:
+  accumulate_grad_batches: 4
+  max_epochs: 3
+  val_check_interval: 1.
+  num_sanity_val_steps: 0
+
+datamodule:
+  split_ratio: null
+  train_config:
+    scale: 0.8
+    size: [600, 800]
+    batch_size: 1
+    wrapper:
+      cfg:
+        seq_len: 5
+        seq_spacing: 10
+        item_spacing: 1
+        shuffle_series_within: all
+  validate_config:
+    scale: 1.0
+    size: [480, 640]
+    batch_size: 8
+    dataset:
+      needs_depth: True
+    wrapper:
+      cfg:
+        seq_len: 2 # do not change: we need image pairs to evaluate matching
+        seq_spacing: 2
+        item_spacing: 1
+  test_config:
+    scale: 1.0
+    size: [480, 640]
+    batch_size: 8
+    dataset:
+      needs_depth: True
+    wrapper:
+      cfg:
+        seq_len: 2 # do not change: we need image pairs to evaluate matching
+        seq_spacing: 2
+        item_spacing: 1
+
+model:
+  # cfg:
+    # evaluator: reproj_mma
+  cfg:
+    evaluator: pose_auc
+    reproj_thresh: [5,10,20]

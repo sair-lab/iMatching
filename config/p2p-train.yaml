@@ -1,0 +1,13 @@
+# @package _global_
+
+defaults:
+  - base
+  - override model: patch2pix
+  - _self_
+# overrides
+task_cat: train
+
+trainer:
+  accelerator: gpu
+  devices: [0]
+

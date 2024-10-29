@@ -1,0 +1,55 @@
+# @package _global_
+
+defaults:
+  - aspan-train
+  - datamodule: tartanair
+  - _self_
+
+# overrides
+task: aspan-train-tartanair
+
+trainer:
+  accumulate_grad_batches: 4
+  max_epochs: 10
+  val_check_interval: 1.
+  num_sanity_val_steps: 0
+
+datamodule:
+  split_ratio: [0.85, 0.05, 0.1]
+  # include: abandonedfactory_night_Easy
+  train_config:
+    scale: 0.8
+    size: [480, 640]
+    batch_size: 1
+    wrapper:
+      cfg:
+        seq_len: 4
+        seq_spacing: 50
+        item_spacing: 2
+        shuffle_series_within: all
+  validate_config:
+    scale: 1.0
+    size: [384, 512]
+    batch_size: 8
+    dataset:
+      needs_depth: True
+    wrapper:
+      cfg:
+        seq_len: 2 # do not change: we need image pairs to evaluate matching
+        seq_spacing: 50
+        item_spacing: 2
+  test_config:
+    scale: 1.0
+    size: [384, 512]
+    batch_size: 8
+    dataset:
+      needs_depth: True
+    wrapper:
+      cfg:
+        seq_len: 2 # do not change: we need image pairs to evaluate matching
+        seq_spacing: 2
+        item_spacing: 2
+
+model:
+  cfg:
+    evaluator: reproj_mma

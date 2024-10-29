@@ -1,0 +1,33 @@
+# @package _global_
+
+defaults:
+  - test
+  - datamodule: tartanair
+  - override logger: null
+  - _self_
+
+# overrides
+task: visualize-tartanair-match
+
+ckpt_path: ./logs/lightning_logs1/version_61/checkpoints/last.ckpt
+datamodule:
+  split_ratio: [0.8, 0.1, 0.1]
+  include: abandonedfactory_night
+  # include: hospital
+  test_config:
+    scale: 0.75
+    include: Hard_P011
+    # include: Easy_P014
+    dataset:
+      needs_depth: True
+    batch_size: 32
+    wrapper:
+      cfg:
+        seq_len: 2
+        seq_spacing: 4
+        item_spacing: 2
+
+model:
+  cfg:
+    scale: 0.75
+

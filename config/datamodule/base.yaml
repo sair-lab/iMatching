@@ -1,0 +1,13 @@
+defaults:
+  - datamodule
+
+
+train_config:
+  dataset:
+    root: ${data_root}
+validate_config:
+  dataset:
+    root: ${data_root}
+test_config:
+  dataset:
+    root: ${data_root}

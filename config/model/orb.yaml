@@ -1,0 +1,8 @@
+defaults:
+  - model
+  - keypoint: null
+  - matching: orb_matcher
+
+matching:
+  nfeatures: 300
+  ransac_tol: -1

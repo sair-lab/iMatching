@@ -1,0 +1,11 @@
+# @package _global_
+
+defaults:
+  - base
+  - _self_
+
+task_cat: test
+
+trainer:
+  devices: [0]
+  max_epochs: 0

@@ -1,0 +1,9 @@
+defaults:
+  - model
+  - keypoint: generic
+  - matching: nn
+  - cfg/criterion: caps_ctof
+
+keypoint:
+  detector: 
+    _target_: models.sift.Sift

@@ -1,0 +1,8 @@
+defaults:
+  - base
+  - dataset@train_config.dataset: kitti
+  - wrapper@train_config.wrapper: spaced-sequence
+  - dataset@validate_config.dataset: kitti
+  - wrapper@validate_config.wrapper: spaced-sequence
+  - dataset@test_config.dataset: kitti
+  - wrapper@test_config.wrapper: spaced-sequence

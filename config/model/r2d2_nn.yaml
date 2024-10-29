@@ -1,0 +1,8 @@
+defaults:
+  - model
+  - keypoint: r2d2
+  - matching: nn
+
+keypoint:
+  config:
+    n_features: 300

@@ -1,0 +1,8 @@
+defaults:
+  - base
+  - dataset@train_config.dataset: tartanair
+  - wrapper@train_config.wrapper: spaced-sequence
+  - dataset@validate_config.dataset: tartanair
+  - wrapper@validate_config.wrapper: spaced-sequence
+  - dataset@test_config.dataset: tartanair
+  - wrapper@test_config.wrapper: spaced-sequence

@@ -1,0 +1,8 @@
+defaults:
+  - model
+  - keypoint: null
+  - matching: aspanformer
+  - cfg/criterion: caps_ctof
+
+matching:
+  pretrained_ckpt: pretrained/weights/indoor.ckpt
