@@ -107,6 +107,7 @@ done
 - [ETH3D SLAM](https://www.eth3d.net/slam_datasets): 
 The dataset will be downloaded automatically by the datamodule.
 # Weights
+Copy the pretrained weights to `pretrained/` directory. The following commands download the weights for CAPS, Patch2Pix, and AspanFormer. DKM weights will be downloaded automatically by the model.
 ```sh
 pip install gdown
 mkdir pretrained
