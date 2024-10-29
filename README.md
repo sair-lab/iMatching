@@ -173,3 +173,15 @@ Examples:
  - Use only part of the dataset: `datamodule.include=\"<regex>\"` or `datamodule.exclude=\"<regex>\"`, where `<regex>` is the regular expression for matching the sequences to be included or removed (e.g. `abandonedfactory_Easy_P00[0-2]`)
  - Change the train/validation/test split ratio of dataset: `datamodule.split_ratio=[0.5,0.3,0.2]`.
  - Change the validation interval: `trainer.val_check_interval=<interval>`, see [PyTorch Lightning docs](https://pytorch-lightning.readthedocs.io/en/stable/common/trainer.html#val-check-interval).
+
+---
+Citing iMatching
+```bibtex
+@inproceedings{zhan2024imatching,
+  title = {{iMatching}: Imperative Correspondence Learning},
+  author = {Zhan, Zitong and Gao, Dasong and Lin, Yun-Jou and Xia, Youjie and Wang, Chen},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year = {2024},
+  url = {https://arxiv.org/abs/2312.02141},
+}
+```
